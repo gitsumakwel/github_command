@@ -1,0 +1,90 @@
+echo "# gitcommand" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://<developerkey>@github.com:gitsumakwel/gitcommand.git
+git push -u origin main
+
+
+git remote add origin https://<developerkey>@github.com:gitsumakwel/gitcommand.git
+git branch -M main
+git push -u origin main
+
+//-a will not include untracked files
+git commit -a -m 
+//will add everything in the repository
+git add -A   
+
+//create an alias to add files for commit
+git config --global alias.addcommit '!git add -A && git commit -m'
+git config --global alias.addcommit 'commit -a -m'
+//use: git addcommit "Message here"
+
+//Revert to previous documents
+//show commit history
+git log
+
+git revert <commit hash code>
+//nano file will appear
+//type  :q!
+
+//shorter hash and commit history
+git reflog
+git reset --hard <commit hash code shorter>
+
+//reset to the last commit
+git reset --hard HEAD
+
+//Pretty Logs
+git log --decorator --graph --oneline
+
+
+//Search logs
+git log -S "Text to search"
+//will log all the commits that is associated with the searched text
+
+
+
+//Allows to save what you are doing without deleting
+//you can switch to any branch without losing your changes
+//then comeback later
+git stash
+//to comeback
+git stash pop
+
+
+//create branch
+git branch branchname
+//switch to branch
+git switch branchname
+//create and switch to branch
+git branch -M branchname
+//delete branch
+git branch -d branchname
+
+
+//pull and merge from remote repository to local branch
+git fetch
+
+
+//to copy repository to your local folder
+git clone github.com:gitsumakwel/gitcommand.git
+
+
+//list all branches with details
+git branch -vv
+//remove the reference to branch in your local repository that is no longer in the remote
+git remote update --prune
+//list all branch that has no more reference to the remove repository
+git branch -vv | awk '/:gone]/{print $1}'
+//to actually remove the list branch
+git branch -vv | awk '/:gone]/{print $1}' | xargs git branch -d
+
+
+
+//wrong changes to a branch but you want to apply to another branch
+git stash
+git checkout branch123
+git stash apply
+
