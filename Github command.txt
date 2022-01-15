@@ -36,6 +36,9 @@ git reset --hard <commit hash code shorter>
 //reset to the last commit
 git reset --hard HEAD
 
+//reset any changes to local
+//git reset --hard
+
 //Pretty Logs
 git log --decorator --graph --oneline
 
