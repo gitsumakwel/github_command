@@ -98,7 +98,11 @@ git stash apply
 git rm --cached .env 
 3. git add . 
 4. git commit -m "removing secrets" 
-Optional: git branch -m main or git checkout -b main
+//Optional: 
+  //to switch the name of the unborn branch to main
+  git checkout -b main
+  // or only works once you have an initial commit.
+  git branch -m main  
 5. git push -u origin main . Now your .env file is remove from github repo.
 
 
