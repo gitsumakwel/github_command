@@ -79,7 +79,7 @@ git clone github.com:gitsumakwel/gitcommand.git
 git branch -vv
 //remove the reference to branch in your local repository that is no longer in the remote
 git remote update --prune
-//list all branch that has no more reference to the remove repository
+//list all branch that has no more reference to the remote repository
 git branch -vv | awk '/:gone]/{print $1}'
 //to actually remove the list branch
 git branch -vv | awk '/:gone]/{print $1}' | xargs git branch -d
