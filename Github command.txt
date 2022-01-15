@@ -85,9 +85,26 @@ git branch -vv | awk '/:gone]/{print $1}'
 git branch -vv | awk '/:gone]/{print $1}' | xargs git branch -d
 
 
-
 //wrong changes to a branch but you want to apply to another branch
 git stash
 git checkout branch123
 git stash apply
+
+
+//how to remove secrets in your remote repository
+1. create a file .gitignore in your root directory
+ and add .env file name in that .gitignore folder.
+2. After that You must untracked the .env file from git using 
+git rm --cached .env 
+3. git add . 
+4. git commit -m "removing secrets" 
+Optional: git branch -m main or git checkout -b main
+5. git push -u origin main . Now your .env file is remove from github repo.
+
+
+Reference:
+https://stackoverflow.com/questions/30696930/how-to-hide-env-file-from-github
+https://www.youtube.com/watch?v=mnmYwRoSisg
+https://snyk.io/blog/10-git-aliases-for-faster-and-productive-git-workflow/
+
 
