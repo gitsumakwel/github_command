@@ -107,9 +107,11 @@ git stash apply
 
 //how to remove secrets in your remote repository
 1. create a file .gitignore in your root directory
- and add .env file name in that .gitignore folder.
+   and add .env file name in that .gitignore folder.
 2. After that You must untracked the .env file from git using 
 git rm --cached .env 
+   // or
+git rm -r --cached folder
 3. git add . 
 4. git commit -m "removing secrets" 
 //Optional: 
