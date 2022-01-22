@@ -1,9 +1,12 @@
 echo "# gitcommand" >> README.md
+git checkout -b branch/task_short_desc
 git init
 git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://<developerkey>@github.com:gitsumakwel/gitcommand.git
+git commit -m ":sparkles: first commit"
+#use of token
+git remote add origin https://<developerkey>@github.com:gitsumakwel/gitrepository.git
+ #or use of ssh, no token needed
+ git remote add origin git@github.com:gitsumakwel/gitrepository.git
 git push -u origin main
 
 
