@@ -1,15 +1,26 @@
-echo "# gitcommand" >> README.md
-git checkout -b branch/task_short_desc
+# gitcommand"
+
+
+#initialize git if not yet done
 git init
-git add README.md
+#edit .gitignore for files you dont want to include
+
+#copy and paste to branch/task_short_desc
+#add every changes
+#commit the changes
+#add the remote repository address
+#push the changes to branch/task_short_desk
+git checkout -b branch/task_short_desc
+git add .
 git commit -m ":sparkles: first commit"
 #use of token
 git remote add origin https://<developerkey>@github.com:gitsumakwel/gitrepository.git
  #or use of ssh, no token needed
  git remote add origin git@github.com:gitsumakwel/gitrepository.git
-git push -u origin main
+git push -u origin branch/task_short_desc
 
-
+#this is to rename current branch to main
+#push the branch to remote repository as main
 git remote add origin https://<developerkey>@github.com:gitsumakwel/gitcommand.git
 git branch -M main
 git push -u origin main
